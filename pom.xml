@@ -10,7 +10,7 @@
 		<dependency>
 			<groupId>xyz.calvinwilliams</groupId>
 			<artifactId>sqlaction</artifactId>
-			<version>0.2.0.0</version>
+			<version>0.2.1.0</version>
 		</dependency>
 	</dependencies>
 </project>

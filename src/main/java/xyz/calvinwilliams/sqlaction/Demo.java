@@ -10,8 +10,8 @@ public class Demo {
 
 	public static void main(String[] args) {
 		Connection				conn = null ;
-		List<SqlactionDemoSAO>	sqlactionDemoList = null ;
-		SqlactionDemoSAO		sqlactionDemo = null ;
+		List<SqlactionDemoSAU>	sqlactionDemoList = null ;
+		SqlactionDemoSAU		sqlactionDemo = null ;
 		int						nret = 0 ;
 
 		// Connect to database
@@ -38,7 +38,7 @@ public class Demo {
 			}
 			
 			// Insert record
-			sqlactionDemo = new SqlactionDemoSAO() ;
+			sqlactionDemo = new SqlactionDemoSAU() ;
 			sqlactionDemo.name = "Calvin" ;
 			sqlactionDemo.address = "My address" ;
 			nret = SqlactionDemoSAO.INSERT_INTO_sqlaction_demo( conn, sqlactionDemo ) ;
@@ -61,7 +61,7 @@ public class Demo {
 			}
 			
 			// Query records
-			sqlactionDemoList = new LinkedList<SqlactionDemoSAO>() ;
+			sqlactionDemoList = new LinkedList<SqlactionDemoSAU>() ;
 			nret = SqlactionDemoSAO.SELECT_ALL_FROM_sqlaction_demo( conn, sqlactionDemoList ) ;
 			if( nret < 0 ) {
 				System.out.println( "SqlactionDemoSAO.SELECT_ALL_FROM_sqlaction_demo failed["+nret+"]" );

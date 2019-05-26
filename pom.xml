@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>xyz.calvinwilliams</groupId>
@@ -9,21 +8,11 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.15</version>
-=======
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>xyz.calvinwilliams</groupId>
-	<artifactId>sqlaction-demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-
-	<dependencies>
+		</dependency>
 		<dependency>
 			<groupId>xyz.calvinwilliams</groupId>
 			<artifactId>sqlaction</artifactId>
-			<version>0.2.1.0</version>
->>>>>>> 52a90cb5db91f8e546c7fdeb10a805d9ad9bb567
+			<version>0.2.9.0</version>
 		</dependency>
 	</dependencies>
 </project>

@@ -28,48 +28,48 @@ public class Demo {
 			conn.setAutoCommit(false);
 			
 			// Delete records with name
-			nret = SqlactionDemoSAO.DELETE_FROM_sqlaction_demo_WHERE_name_E_( conn, "Calvin" ) ;
+			nret = SqlactionDemoSAU.DELETE_FROM_sqlaction_demo_WHERE_name_E_( conn, "Calvin" ) ;
 			if( nret < 0 ) {
-				System.out.println( "SqlactionDemoSAO.DELETE_FROM_sqlaction_demo_WHERE_name_E_ failed["+nret+"]" );
+				System.out.println( "SqlactionDemoSAU.DELETE_FROM_sqlaction_demo_WHERE_name_E_ failed["+nret+"]" );
 				conn.rollback();
 				return;
 			} else {
-				System.out.println( "SqlactionDemoSAO.DELETE_FROM_sqlaction_demo_WHERE_name_E_ ok , rows["+nret+"] effected" );
+				System.out.println( "SqlactionDemoSAU.DELETE_FROM_sqlaction_demo_WHERE_name_E_ ok , rows["+nret+"] effected" );
 			}
 			
 			// Insert record
 			sqlactionDemo = new SqlactionDemoSAU() ;
 			sqlactionDemo.name = "Calvin" ;
 			sqlactionDemo.address = "My address" ;
-			nret = SqlactionDemoSAO.INSERT_INTO_sqlaction_demo( conn, sqlactionDemo ) ;
+			nret = SqlactionDemoSAU.INSERT_INTO_sqlaction_demo( conn, sqlactionDemo ) ;
 			if( nret < 0 ) {
-				System.out.println( "SqlactionDemoSAO.INSERT_INTO_sqlaction_demo failed["+nret+"]" );
+				System.out.println( "SqlactionDemoSAU.INSERT_INTO_sqlaction_demo failed["+nret+"]" );
 				conn.rollback();
 				return;
 			} else {
-				System.out.println( "SqlactionDemoSAO.INSERT_INTO_sqlaction_demo ok" );
+				System.out.println( "SqlactionDemoSAU.INSERT_INTO_sqlaction_demo ok" );
 			}
 			
 			// Update record with name
-			nret = SqlactionDemoSAO.UPDATE_sqlaction_demo_SET_address_E_WHERE_name_E_( conn, "My address 2", "Calvin" ) ;
+			nret = SqlactionDemoSAU.UPDATE_sqlaction_demo_SET_address_E_WHERE_name_E_( conn, "My address 2", "Calvin" ) ;
 			if( nret < 0 ) {
-				System.out.println( "SqlactionDemoSAO.UPDATE_sqlaction_demo_SET_address_E_WHERE_name_E_ failed["+nret+"]" );
+				System.out.println( "SqlactionDemoSAU.UPDATE_sqlaction_demo_SET_address_E_WHERE_name_E_ failed["+nret+"]" );
 				conn.rollback();
 				return;
 			} else {
-				System.out.println( "SqlactionDemoSAO.UPDATE_sqlaction_demo_SET_address_E_WHERE_name_E_ ok , rows["+nret+"] effected" );
+				System.out.println( "SqlactionDemoSAU.UPDATE_sqlaction_demo_SET_address_E_WHERE_name_E_ ok , rows["+nret+"] effected" );
 			}
 			
 			// Query records
 			sqlactionDemoList = new LinkedList<SqlactionDemoSAU>() ;
-			nret = SqlactionDemoSAO.SELECT_ALL_FROM_sqlaction_demo( conn, sqlactionDemoList ) ;
+			nret = SqlactionDemoSAU.SELECT_ALL_FROM_sqlaction_demo( conn, sqlactionDemoList ) ;
 			if( nret < 0 ) {
 				System.out.println( "SqlactionDemoSAO.SELECT_ALL_FROM_sqlaction_demo failed["+nret+"]" );
 				conn.rollback();
 				return;
 			} else {
 				System.out.println( "SqlactionDemoSAO.SELECT_ALL_FROM_sqlaction_demo ok" );
-				for( SqlactionDemoSAO r : sqlactionDemoList ) {
+				for( SqlactionDemoSAU r : sqlactionDemoList ) {
 					System.out.println( "    id["+r.id+"] name["+r.name+"] address["+r.address+"]" );
 				}
 			}
